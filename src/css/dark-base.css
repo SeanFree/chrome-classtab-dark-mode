@@ -14,6 +14,10 @@ html, body, pre {
 	font-family: "RobotoMono", serif;
 }
 
+*::selection {
+	background-color: #01579b;
+}
+
 a {
 	color: #81d4fa;
 }

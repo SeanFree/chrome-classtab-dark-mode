@@ -10,10 +10,14 @@
 	"content_scripts": [
 		{
 			"matches": ["http://www.classtab.org/*"],
-			"css": ["src/css/styles.css"]
+			"css": ["src/css/darcula.css"]
 		}
 	],
 	"web_accessible_resources": ["*.ttf"],
+	"background": {
+		"scripts": ["src/js/background.js"],
+		"persistent": false
+	},
 	"page_action": {
 		"default_icon": {
 			"16": "src/img/logo-16.png",
@@ -21,7 +25,8 @@
 			"48": "src/img/logo-48.png",
 			"64": "src/img/logo-64.png",
 			"128": "src/img/logo-128.png"
-		}
+		},
+		"default_popup": "src/popup.html"
 	},
 	"icons": {
 		"16": "src/img/logo-16.png",
