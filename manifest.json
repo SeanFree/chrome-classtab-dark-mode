@@ -1,6 +1,6 @@
 {
 	"name": "Classtab.org Dark Mode",
-	"version": "1.0",
+	"version": "0.0.1",
 	"description": "A dark mode theme for Classtab.org",
 	"permissions": [
 		"activeTab",
