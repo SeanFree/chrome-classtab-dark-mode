@@ -1,0 +1,36 @@
+@font-face {
+	font-family: 'UbuntuMono';
+	src: url('chrome-extension://__MSG_@@extension_id__/src/fonts/UbuntuMono-Regular.ttf');
+	font-weight: normal;
+	font-style: normal;
+}
+
+html, body {
+	background-color: #000c1d !important;
+	color: #eefefe !important;
+}
+
+html, body, pre {
+	font-family: "UbuntuMono", serif;
+}
+
+*::selection {
+	background-color: #01579b;
+}
+
+a {
+	color: #b39ddb;
+}
+
+a:visited {
+	color: #673ab7;
+}
+
+font[color="#ff0000"] {
+	color: #ffd54f;
+}
+
+img:first-of-type {
+	filter: invert(1);
+	mix-blend-mode: screen
+}
