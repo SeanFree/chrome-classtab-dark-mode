@@ -8,7 +8,7 @@ window.addEventListener('load', start)
 
 function start () {
 	chrome.storage.sync.get(extKey, function (storage) {
-		const activeTheme = storage[extKey]
+		let activeTheme = storage[extKey]
 
 		if (!activeTheme) {
 			activeTheme = defaultTheme
