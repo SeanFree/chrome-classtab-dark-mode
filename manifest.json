@@ -5,18 +5,23 @@
 	"permissions": [
 		"activeTab",
 		"declarativeContent",
-		"storage"
+		"storage",
+		"http://www.classtab.org/*"
 	],
 	"content_scripts": [
 		{
 			"matches": ["http://www.classtab.org/*"],
-			"css": ["src/css/darcula.css"]
+			"js": ["src/js/content.js"]
 		}
 	],
-	"web_accessible_resources": ["*.ttf"],
+	"web_accessible_resources": [
+		"*.css",
+		"*.js",
+		"*.ttf"
+	],
 	"background": {
 		"scripts": ["src/js/background.js"],
-		"persistent": false
+		"persistent": true
 	},
 	"page_action": {
 		"default_icon": {
