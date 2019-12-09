@@ -1,6 +1,21 @@
 # Changelog
 
-## [0.0.1] - 2019-12-08 (Initial Release)
+## [1.0.0] - 2019-12-08 (Initial Release)
+
+### Added
+
+- Popup menu
+- Ability to disable color theme
+- Scripts & configuration (background, popup, content)
+- 3 new palettes: Darcula, Crimson, Midnight
+
+### Changed
+
+- styles.css -> dark-base.css
+
+---
+
+## [0.0.1] - 2019-12-08 (Creation)
 
 ### Added
 
