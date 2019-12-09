@@ -1,0 +1,35 @@
+{
+  "name": "chrome-classtab-dark-mode",
+  "version": "1.0.0",
+  "description": "A chrome extension for adding dark mode themes on Classtab.org",
+  "scripts": {
+    "build": "node build.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SeanFree/chrome-classtab-dark-mode.git"
+  },
+  "keywords": [
+    "color",
+    "theme",
+    "dark",
+    "mode",
+    "chrome",
+    "extension"
+  ],
+  "author": "Sean Free",
+  "license": "Apache-2.0",
+  "licenses": [
+    {
+      "type": "Apache-2.0",
+      "url": "http://www.apache.org/licenses/LICENSE-2.0"
+    }
+  ],
+  "bugs": {
+    "url": "https://github.com/SeanFree/chrome-classtab-dark-mode/issues"
+  },
+  "homepage": "https://github.com/SeanFree/chrome-classtab-dark-mode#readme",
+  "devDependencies": {
+    "archiver": "^3.1.1"
+  }
+}
