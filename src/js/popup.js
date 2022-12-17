@@ -38,7 +38,7 @@ function setup (activeTheme) {
 		optionLabel.classList.add('ct-options__label')
 		optionLabel.setAttribute('for', id)
 		optionLabel.innerText = key
-		
+
 		const optionRadio = document.createElement('input')
 		optionRadio.classList.add('ct-options__radio')
 		optionRadio.setAttribute('id', id)

@@ -1,29 +1,48 @@
 {
 	"name": "Classtab.org Dark Mode",
-	"version": "1.0.0",
+	"version": "1.0.1",
+	"author": "Sean Free",
 	"description": "A dark mode theme for Classtab.org",
 	"permissions": [
-		"activeTab",
 		"declarativeContent",
 		"storage",
-		"http://www.classtab.org/*"
+		"tabs"
+	],
+	"host_permissions": [
+		"https://www.classtab.org/*"
 	],
 	"content_scripts": [
 		{
-			"matches": ["http://www.classtab.org/*"],
+			"matches": ["https://www.classtab.org/*"],
 			"js": ["src/js/content.js"]
 		}
 	],
-	"web_accessible_resources": [
-		"*.css",
-		"*.js",
-		"*.ttf"
-	],
+	"web_accessible_resources": [{
+		"resources": [
+			"src/css/crimson.css",
+			"src/css/darcula.css",
+			"src/css/dark-base.css",
+			"src/css/disabled.css",
+			"src/css/midnight.css",
+			"src/css/popup.css",
+			"src/fonts/CutiveMono-Regular.ttf",
+			"src/fonts/NovaMono-Regular.ttf",
+			"src/fonts/RobotoMono-Regular.ttf",
+			"src/fonts/UbuntuMono-Regular.ttf",
+			"src/img/logo-16.png",
+			"src/img/logo-32.png",
+			"src/img/logo-48.png",
+			"src/img/logo-64.png",
+			"src/img/logo-128.png",
+			"src/js/content.js",
+			"src/js/popup.js"
+		],
+		"matches": ["*://*/*"]
+	}],
 	"background": {
-		"scripts": ["src/js/background.js"],
-		"persistent": true
+		"service_worker": "src/js/background.js"
 	},
-	"page_action": {
+	"action": {
 		"default_icon": {
 			"16": "src/img/logo-16.png",
 			"32": "src/img/logo-32.png",
@@ -40,5 +59,5 @@
 		"64": "src/img/logo-64.png",
 		"128": "src/img/logo-128.png"
 	},
-	"manifest_version": 2
+	"manifest_version": 3
 }

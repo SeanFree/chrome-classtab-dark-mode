@@ -7,6 +7,7 @@ let linkEl
 window.addEventListener('load', start)
 
 function start () {
+	console.log(chrome)
 	chrome.storage.sync.get(extKey, function (storage) {
 		let activeTheme = storage[extKey]
 
@@ -37,5 +38,5 @@ function setupLinkEl (activeTheme) {
 }
 
 function swapCSS (theme) {
-	linkEl.setAttribute('href', chrome.extension.getURL(`src/css/${theme}.css`))
+	linkEl.setAttribute('href', chrome.runtime.getURL(`src/css/${theme}.css`))
 }
