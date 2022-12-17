@@ -4,9 +4,9 @@
 	"author": "Sean Free",
 	"description": "A dark mode theme for Classtab.org",
 	"permissions": [
+		"activeTab",
 		"declarativeContent",
-		"storage",
-		"tabs"
+		"storage"
 	],
 	"host_permissions": [
 		"https://www.classtab.org/*"
