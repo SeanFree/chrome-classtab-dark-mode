@@ -7,7 +7,6 @@ let linkEl
 window.addEventListener('load', start)
 
 function start () {
-	console.log(chrome)
 	chrome.storage.sync.get(extKey, function (storage) {
 		let activeTheme = storage[extKey]
 
