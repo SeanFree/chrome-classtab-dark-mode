@@ -1,5 +1,9 @@
 # Changelog
 
+## [1.0.1] - 2022-12-17 (Manifest v3 Migration)
+
+- Migrated to Manifest v3
+
 ## [1.0.0] - 2019-12-08 (Initial Release)
 
 ### Added
