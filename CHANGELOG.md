@@ -1,6 +1,6 @@
 # Changelog
 
-## [1.0.1] - 2022-12-17 (Manifest v3 Migration)
+## [1.0.2] - 2022-12-17 (Manifest v3 Migration)
 
 - Migrated to Manifest v3
 
