@@ -1,0 +1,63 @@
+@import "tailwindcss/base";
+@import "tailwindcss/utilities";
+@import "tailwindcss/components";
+
+@layer base {
+  :root[data-theme^="ctd"] {
+    &, body {
+      background-color: var(--ctd-background-color, "white") !important;
+      color: var(--ctd-text-color) !important;
+    }
+
+    &,
+    body,
+    pre {
+      /* font-family: var(--ctd-font-family, "serif"); */
+    }
+
+    *::selection {
+      background-color: var(--ctd-text-selection-color);
+    }
+
+    a {
+      color: var(--ctd-link-color);
+    }
+
+    img:first-of-type:not(.ctd-img) {
+      @apply ctd-mix-blend-screen;
+
+      filter: var(--ctd-logo-filter);
+    }
+
+    a:visited {
+      color: var(--ctd-link-visited-color);
+    }
+
+    *[color="#ff0000"] {
+      color: var(--ctd-text-highlight-color);
+    }
+
+    hr {
+      @apply
+        ctd-block
+        ctd-h-px
+        ctd-border-0
+        ctd-border-t
+        ctd-border-solid
+        ctd-p-0;
+
+      border-color: var(--ctd-divider-color);
+    }
+
+    *:focus {
+      @apply ctd-outline-2
+        ctd-outline;
+
+      outline-color: var(--ctd-focus-outline-color);
+
+      &:not([class*="rounded"]) {
+        @apply ctd-rounded-sm;
+      }
+    }
+  }
+}
