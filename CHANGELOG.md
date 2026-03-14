@@ -1,5 +1,14 @@
 # Changelog
 
+## [1.1.0] - 2026-03-14
+
+- Refactored themes to use CSS custom properties
+- Removed individual theme files & related code in popup + content scripts
+- Updated popup and content scripts to swap data-theme attribute
+- Added new extension icons
+- Restyled extension popup
+- Fixed issue with accent and highlight styles
+
 ## [1.0.3] - 2026-03-14
 
 - Added build script to package extension as zip

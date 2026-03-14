@@ -1,4 +1,4 @@
-# Classtab Dark Mode 1.0.3
+# Classtab Dark Mode 1.1.0
 
 This chrome extension enables dark mode on the [classtab](http://www.classtab.org) website.
 

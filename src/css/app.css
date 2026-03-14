@@ -1,0 +1,116 @@
+@font-face {
+  font-family: 'NovaMono';
+  src: url('chrome-extension://__MSG_@@extension_id__/fonts/NovaMono-Regular.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'CutiveMono';
+  src: url('chrome-extension://__MSG_@@extension_id__/fonts/CutiveMono-Regular.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'RobotoMono';
+  src: url('chrome-extension://__MSG_@@extension_id__/fonts/RobotoMono-Regular.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'UbuntuMono';
+  src: url('chrome-extension://__MSG_@@extension_id__/fonts/UbuntuMono-Regular.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+html,
+body {
+  background-color: var(--ct-color-bg-app) !important;
+  color: var(--ct-color-text-app) !important;
+}
+
+html,
+body,
+pre {
+  font-family: var(--ct-font-family);
+}
+
+*::selection {
+  background-color: var(--ct-color-selection);
+}
+
+a {
+  color: var(--ct-color-link);
+}
+
+a:visited {
+  color: var(--ct-color-link-visited);
+}
+
+*[style='color: red;'] {
+  color: var(--ct-color-accent) !important;
+}
+
+*[style='color: green;'] {
+  color: var(--ct-color-highlight) !important;
+}
+
+img:first-of-type {
+  filter: var(--ct-logo-filter);
+  mix-blend-mode: var(--ct-logo-blend-mode);
+}
+
+:root[data-theme='crimson'] {
+  --ct-color-bg-app: #2c1019;
+  --ct-color-text-app: #fff2f2;
+  --ct-font-family: 'NovaMono', serif;
+  --ct-color-selection: #9f515a;
+  --ct-color-link: #ffe082;
+  --ct-color-link-visited: #d89700;
+  --ct-color-accent: #42a5f5;
+  --ct-color-highlight: #b992f8;
+  --ct-logo-filter: invert(1) hue-rotate(120deg) sepia(0.5);
+  --ct-logo-blend-mode: screen;
+}
+
+:root[data-theme='darcula'] {
+  --ct-color-bg-app: #282a36;
+  --ct-color-text-app: #f8f8f2;
+  --ct-font-family: 'CutiveMono', serif;
+  --ct-color-selection: #311b92;
+  --ct-color-link: #8be9fd;
+  --ct-color-link-visited: #bd93f9;
+  --ct-color-accent: #ffb74d;
+  --ct-color-highlight: #80d16c;
+  --ct-logo-filter: invert(1) hue-rotate(35deg);
+  --ct-logo-blend-mode: screen;
+}
+
+:root[data-theme='dark-base'] {
+  --ct-color-bg-app: #393939;
+  --ct-color-text-app: #ffffff;
+  --ct-font-family: 'RobotoMono', serif;
+  --ct-color-selection: #01579b;
+  --ct-color-link: #81d4fa;
+  --ct-color-link-visited: #b39ddb;
+  --ct-color-accent: #ef9a9a;
+  --ct-color-highlight: #6cd186;
+  --ct-logo-filter: invert(1);
+  --ct-logo-blend-mode: screen;
+}
+
+:root[data-theme='midnight'] {
+  --ct-color-bg-app: #000c1d;
+  --ct-color-text-app: #eefefe;
+  --ct-font-family: 'UbuntuMono', serif;
+  --ct-color-selection: #01579b;
+  --ct-color-link: #b39ddb;
+  --ct-color-link-visited: #8058c5;
+  --ct-color-accent: #ffd54f;
+  --ct-color-highlight: #4fff84;
+  --ct-logo-filter: invert(1);
+  --ct-logo-blend-mode: screen;
+}

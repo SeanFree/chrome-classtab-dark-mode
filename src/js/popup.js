@@ -33,7 +33,7 @@ function setup(activeTheme) {
 
   function renderOption(key, value) {
     const id = `ctOption-${value}`
-    const optionItem = document.createElement('li')
+    const optionItem = document.createElement('div')
     optionItem.classList.add('ct-options__item')
 
     const optionLabel = document.createElement('label')
@@ -47,6 +47,7 @@ function setup(activeTheme) {
     optionRadio.setAttribute('name', 'ct-active-theme')
     optionRadio.setAttribute('type', 'radio')
     optionRadio.setAttribute('value', value)
+    optionRadio.classList.add('sr-only')
     value === activeTheme && optionRadio.setAttribute('checked', true)
 
     optionRadio.addEventListener('change', themeChange)

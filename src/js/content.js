@@ -2,9 +2,6 @@
 
 const extKey = 'ctActiveTheme'
 const defaultTheme = 'dark-base'
-const linkId = 'ct-styles'
-
-let linkEl
 
 window.addEventListener('load', start)
 
@@ -28,24 +25,21 @@ function start() {
 }
 
 function setupCSS(activeTheme) {
-  const baseCSS = chrome.runtime.getURL(`css/index.css`)
-  const baseLink = document.createElement('link')
-  baseLink.setAttribute('rel', 'stylesheet')
-  baseLink.setAttribute('type', 'text/css')
-  baseLink.setAttribute('href', baseCSS)
+  const srcHref = chrome.runtime.getURL(`css/app.css`)
+  const link = document.createElement('link')
+  link.setAttribute('rel', 'stylesheet')
+  link.setAttribute('type', 'text/css')
+  link.setAttribute('href', srcHref)
 
-  document.head.appendChild(baseLink)
-
-  linkEl = document.createElement('link')
-  linkEl.setAttribute('id', linkId)
-  linkEl.setAttribute('rel', 'stylesheet')
-  linkEl.setAttribute('type', 'text/css')
-
-  document.head.appendChild(linkEl)
+  document.head.appendChild(link)
 
   swapCSS(activeTheme)
 }
 
 function swapCSS(theme) {
-  linkEl.setAttribute('href', chrome.runtime.getURL(`css/${theme}.css`))
+  if (theme === 'disabled') {
+    document.documentElement.removeAttribute('data-theme')
+  } else {
+    document.documentElement.setAttribute('data-theme', theme)
+  }
 }

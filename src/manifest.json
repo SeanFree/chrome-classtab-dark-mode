@@ -1,8 +1,8 @@
 {
   "name": "Classtab.org Dark Mode",
-  "version": "1.0.3",
+  "version": "1.1.0",
   "author": "Sean Free",
-  "description": "A dark mode theme for Classtab.org",
+  "description": "Dark mode themes for Classtab.org",
   "permissions": [
     "activeTab",
     "declarativeContent",
@@ -24,12 +24,7 @@
   "web_accessible_resources": [
     {
       "resources": [
-        "css/index.css",
-        "css/crimson.css",
-        "css/darcula.css",
-        "css/dark-base.css",
-        "css/disabled.css",
-        "css/midnight.css",
+        "css/app.css",
         "css/popup.css",
         "fonts/CutiveMono-Regular.ttf",
         "fonts/NovaMono-Regular.ttf",
