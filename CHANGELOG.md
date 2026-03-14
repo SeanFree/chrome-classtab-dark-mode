@@ -1,5 +1,14 @@
 # Changelog
 
+## [1.0.3] - 2026-03-14
+
+- Added build script to package extension as zip
+- Moved manifest.json to src/
+  - Updated resource paths in manifest
+  - Updated css imports
+- Added index.css to frontload font families
+- Added eslint + prettier, formatted files
+
 ## [1.0.2] - 2022-12-17 (Manifest v3 Migration)
 
 - Migrated to Manifest v3

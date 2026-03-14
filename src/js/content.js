@@ -1,3 +1,5 @@
+/// <reference types="@types/chrome" />
+
 const extKey = 'ctActiveTheme'
 const defaultTheme = 'dark-base'
 const linkId = 'ct-styles'
@@ -6,36 +8,44 @@ let linkEl
 
 window.addEventListener('load', start)
 
-function start () {
-	chrome.storage.sync.get(extKey, function (storage) {
-		let activeTheme = storage[extKey]
+function start() {
+  chrome.storage.sync.get(extKey, function (storage) {
+    let activeTheme = storage[extKey]
 
-		if (!activeTheme) {
-			activeTheme = defaultTheme
-			chrome.storage.sync.set({ [extKey]: activeTheme })
-		}
+    if (!activeTheme) {
+      activeTheme = defaultTheme
+      chrome.storage.sync.set({ [extKey]: activeTheme })
+    }
 
-		setupLinkEl(activeTheme)
+    setupCSS(activeTheme)
 
-		chrome.runtime.onMessage.addListener(function (message, sender, sendResponse) {
-			if (message.type === 'themeChange') {
-				swapCSS(message.value)
-			}
-		})
-	})
+    chrome.runtime.onMessage.addListener(function (message) {
+      if (message.type === 'themeChange') {
+        swapCSS(message.value)
+      }
+    })
+  })
 }
 
-function setupLinkEl (activeTheme) {
-	linkEl = document.createElement('link')
-	linkEl.setAttribute('id', linkId)
-	linkEl.setAttribute('rel', 'stylesheet')
-	linkEl.setAttribute('type', 'text/css')
+function setupCSS(activeTheme) {
+  const baseCSS = chrome.runtime.getURL(`css/index.css`)
+  const baseLink = document.createElement('link')
+  baseLink.setAttribute('rel', 'stylesheet')
+  baseLink.setAttribute('type', 'text/css')
+  baseLink.setAttribute('href', baseCSS)
 
-	document.head.appendChild(linkEl)
+  document.head.appendChild(baseLink)
 
-	swapCSS(activeTheme)
+  linkEl = document.createElement('link')
+  linkEl.setAttribute('id', linkId)
+  linkEl.setAttribute('rel', 'stylesheet')
+  linkEl.setAttribute('type', 'text/css')
+
+  document.head.appendChild(linkEl)
+
+  swapCSS(activeTheme)
 }
 
-function swapCSS (theme) {
-	linkEl.setAttribute('href', chrome.runtime.getURL(`src/css/${theme}.css`))
+function swapCSS(theme) {
+  linkEl.setAttribute('href', chrome.runtime.getURL(`css/${theme}.css`))
 }
